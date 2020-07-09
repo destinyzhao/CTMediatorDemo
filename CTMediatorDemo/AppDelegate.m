@@ -21,7 +21,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor=[UIColor whiteColor];
 
-    UIViewController *vc1 = [[CTMediator sharedInstance]mediator_ModuleAPage1ViewController:@{}];
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    UIViewController *vc1 = [[CTMediator sharedInstance]mediator_ModuleAPage1ViewController:dic];
     vc1.title = @"ModuleAPage1";
     UINavigationController *navi1 = [[UINavigationController alloc]initWithRootViewController:vc1];
     navi1.tabBarItem.title=@"ModuleA";

@@ -16,7 +16,7 @@ NSString * const kCTMediatorActionNativTo_ModuleAPage2ViewController = @"ModuleA
 
 @implementation CTMediator (ModuleA)
 
-- (BaseViewController *)mediator_ModuleAPage1ViewController:(NSDictionary *)params{
+- (BaseViewController *)mediator_ModuleAPage1ViewController:(NSMutableDictionary *)params{
    BaseViewController *viewController = [self performTarget:kCTMediatorTarget_ModuleA
                                                    action:kCTMediatorActionNativTo_ModuleAPage1ViewController
                                                    params:params shouldCacheTarget:NO];
@@ -30,7 +30,8 @@ NSString * const kCTMediatorActionNativTo_ModuleAPage2ViewController = @"ModuleA
    }
 }
 
-- (BaseViewController *)mediator_ModuleAPage2ViewController:(NSDictionary *)params{
+- (BaseViewController *)mediator_ModuleAPage2ViewController:(NSMutableDictionary *)params completion:(void (^)(NSDictionary *))completion{
+    [params setValue:completion forKey:@"callback"];
    BaseViewController *viewController = [self performTarget:kCTMediatorTarget_ModuleA
                                                      action:kCTMediatorActionNativTo_ModuleAPage2ViewController
                                                      params:params shouldCacheTarget:NO];

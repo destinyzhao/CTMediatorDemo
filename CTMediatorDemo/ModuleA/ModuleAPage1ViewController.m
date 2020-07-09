@@ -73,7 +73,12 @@
 
 - (void)pushModuleAPage2
 {
-    UIViewController *viewController = [[CTMediator sharedInstance] mediator_ModuleAPage2ViewController:@{@"page":@"ModuleAPage1"}];
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    [param setValue:@"ModuleAPage1" forKey:@"page"];
+    UIViewController *viewController = [[CTMediator sharedInstance] mediator_ModuleAPage2ViewController:param completion:^(NSDictionary * _Nonnull dic) {
+        NSLog(@"%@",dic);
+        
+    }];
      [viewController setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:viewController animated:YES];
 }

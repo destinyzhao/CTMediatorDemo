@@ -13,9 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CTMediator (ModuleA)
 
-- (BaseViewController *)mediator_ModuleAPage1ViewController:(NSDictionary *)params;
+- (BaseViewController *)mediator_ModuleAPage1ViewController:(NSMutableDictionary *)params;
 
-- (BaseViewController *)mediator_ModuleAPage2ViewController:(NSDictionary *)params;
+- (BaseViewController *)mediator_ModuleAPage2ViewController:(NSMutableDictionary *)params completion:(void (^)(NSDictionary *))completion;
 
 @end
 

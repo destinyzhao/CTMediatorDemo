@@ -10,6 +10,8 @@
 #import "ModuleAPage1ViewController.h"
 #import "ModuleAPage2ViewController.h"
 
+ typedef void (^CallbackType)(NSDictionary *);
+
 @implementation Target_ModuleA
 
 - (BaseViewController *)Action_ModuleAPage1ViewController:(NSDictionary *)params{
@@ -19,6 +21,11 @@
 }
 
 - (BaseViewController *)Action_ModuleAPage2ViewController:(NSDictionary *)params{
+   
+    CallbackType callback = params[@"callback"];
+    if (callback) {
+        callback(@{@"status":@"success"});
+    }
     ModuleAPage2ViewController *vc = [[ModuleAPage2ViewController alloc]init];
     vc.parameter = params;
     return vc;
