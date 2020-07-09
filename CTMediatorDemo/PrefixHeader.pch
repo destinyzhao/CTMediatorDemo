@@ -1,0 +1,18 @@
+//
+//  PrefixHeader.pch
+//  CTMediatorDemo
+//
+//  Created by bidongmao on 2019/12/4.
+//  Copyright © 2019 bidm. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "BaseViewController.h"
+#import <CTMediator/CTMediator.h>
+#import "CTMediator+ModuleA.h"
+#import "CTMediator+ModuleB.h"
+#import "CTMediator+ModuleC.h"
+
+#endif /* PrefixHeader_pch */
