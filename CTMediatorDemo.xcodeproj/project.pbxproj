@@ -25,6 +25,7 @@
 		DEB372FD24B6A3ED00400E33 /* ModuleCPage1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB372F724B6A3ED00400E33 /* ModuleCPage1ViewController.m */; };
 		DEB372FE24B6A3ED00400E33 /* ModuleCPage2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB372F924B6A3ED00400E33 /* ModuleCPage2ViewController.m */; };
 		DEB372FF24B6A3ED00400E33 /* CTMediator+ModuleC.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB372FB24B6A3ED00400E33 /* CTMediator+ModuleC.m */; };
+		DEB3730324B71DD500400E33 /* Signal.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB3730224B71DD500400E33 /* Signal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,8 @@
 		DEB372F924B6A3ED00400E33 /* ModuleCPage2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleCPage2ViewController.m; sourceTree = "<group>"; };
 		DEB372FA24B6A3ED00400E33 /* CTMediator+ModuleC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CTMediator+ModuleC.h"; sourceTree = "<group>"; };
 		DEB372FB24B6A3ED00400E33 /* CTMediator+ModuleC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CTMediator+ModuleC.m"; sourceTree = "<group>"; };
+		DEB3730124B71DD500400E33 /* Signal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Signal.h; sourceTree = "<group>"; };
+		DEB3730224B71DD500400E33 /* Signal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Signal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,7 @@
 		DE341A5124B5A2AB005E59B8 /* CTMediatorDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DEB3730024B71DA200400E33 /* Singleton */,
 				DE341A6E24B5A91F005E59B8 /* BaseModule */,
 				DE341A6B24B5A8F3005E59B8 /* ModuleA */,
 				DE341A6C24B5A8F3005E59B8 /* ModuleB */,
@@ -184,6 +188,15 @@
 				DEB372F624B6A3ED00400E33 /* Target_ModuleC.m */,
 			);
 			path = ModuleC;
+			sourceTree = "<group>";
+		};
+		DEB3730024B71DA200400E33 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				DEB3730124B71DD500400E33 /* Signal.h */,
+				DEB3730224B71DD500400E33 /* Signal.m */,
+			);
+			path = Singleton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE341A8824B5B326005E59B8 /* ModuleBPage1ViewController.m in Sources */,
+				DEB3730324B71DD500400E33 /* Signal.m in Sources */,
 				DEB372FC24B6A3ED00400E33 /* Target_ModuleC.m in Sources */,
 				DE341A8924B5B326005E59B8 /* CTMediator+ModuleB.m in Sources */,
 				DEB372FF24B6A3ED00400E33 /* CTMediator+ModuleC.m in Sources */,

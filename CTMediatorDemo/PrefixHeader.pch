@@ -14,5 +14,7 @@
 #import "CTMediator+ModuleA.h"
 #import "CTMediator+ModuleB.h"
 #import "CTMediator+ModuleC.h"
+#import <ReactiveObjC.h>
+#import "Signal.h"
 
 #endif /* PrefixHeader_pch */

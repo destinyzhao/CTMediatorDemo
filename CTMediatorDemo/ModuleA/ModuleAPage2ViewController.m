@@ -10,6 +10,8 @@
 
 @interface ModuleAPage2ViewController ()
 
+@property (copy, nonatomic)  id<RACSubscriber> subscriber;
+
 @end
 
 @implementation ModuleAPage2ViewController
@@ -20,6 +22,14 @@
     
     self.title = @"ModuleAPage2";
     NSLog(@"params:%@",self.parameter);
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    
+    //发送信号
+    [[Signal sharedSignal].subject sendNext:@"ModuleAPage2ViewWillDisappear"];
 }
 
 /*

@@ -26,6 +26,7 @@
     if (callback) {
         callback(@{@"status":@"success"});
     }
+    
     ModuleAPage2ViewController *vc = [[ModuleAPage2ViewController alloc]init];
     vc.parameter = params;
     return vc;

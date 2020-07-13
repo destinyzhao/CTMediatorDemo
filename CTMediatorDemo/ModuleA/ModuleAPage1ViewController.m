@@ -7,6 +7,7 @@
 //
 
 #import "ModuleAPage1ViewController.h"
+#import "ModuleAPage2ViewController.h"
 
 @interface ModuleAPage1ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -25,6 +26,11 @@
     [self setupTableView];
     self.dataArray = @[@"ModuleAPage2",@"ModuleBPage1",@"ModuleCPage1"];
     [self.tableView reloadData];
+    
+    //订阅信号
+    [[Signal sharedSignal].subject subscribeNext:^(id x) {
+           NSLog(@"订阅者一%@",x);
+    }];
 }
 
 - (void)setupTableView{
@@ -77,7 +83,7 @@
     [param setValue:@"ModuleAPage1" forKey:@"page"];
     UIViewController *viewController = [[CTMediator sharedInstance] mediator_ModuleAPage2ViewController:param completion:^(NSDictionary * _Nonnull dic) {
         NSLog(@"%@",dic);
-        
+
     }];
      [viewController setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:viewController animated:YES];

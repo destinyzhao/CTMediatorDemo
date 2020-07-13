@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ModuleAPage2ViewController : BaseViewController
 
+
 @end
 
 NS_ASSUME_NONNULL_END
